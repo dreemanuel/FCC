@@ -36,12 +36,13 @@ ARRAY Methods
 FOR LOOPS
     iterates an action until stopping conditions are met, then moves into the next part of program
 */
-    for (let counter = 0;       //counter var starts at 0;
-        counter < 4;            //counter var ends if < 4 is false;
-        counter++)              //counter var increments by 1;
-        {
-        console.log (counter);  //code block to execute
-    };
+    for (let counter = 0; counter < 4; counter++) {
+        console.log (counter);
+    }   
+    //counter var starts at 0;
+    //counter var ends if < 4 is false;
+    //counter var increments by 1;
+
     //output:
     //0
     //1
@@ -83,9 +84,11 @@ while loop is used when we don't know how many loops will run until code is stop
 eg.
 */
 let whileLoop = 1;
-while (whileLoop < 4) {                     //stop is declared first, in paretheses
-    console.log(whileLoop); whileLoop++;    //code block, containing increment iteration
+while (whileLoop < 4) {
+    console.log(whileLoop); whileLoop++;
 }
+//stop is declared in paretheses
+//code block, containing increment iteration
 
 
 assign random numbers to index an array;
@@ -97,24 +100,3 @@ while (currentCard !== 'spade') {
   console.log(currentCard);
 };
 /*
-
-DO WHILE LOOPS
-to execute a statement once first before looping it to a condition.
-the do while loop will run at least once even if condition != true.
-*/
-
-let countString = '';
-let i = 0;
-
-do {
-    countString = countString + i;
-    i++;
-} while (i < 5);
-console.log(countString);
-
-/*
-HIGHER ORDER FUNCTIONS are functions that pass other functions as parameters/arguments, or returns a function.
-functions as parameters are called callback functions
-
-
-ITERATORS
