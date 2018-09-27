@@ -138,3 +138,17 @@ function golfScore(par, strokes) {
 golfScore(5, 4);
 
 //SWITCH STATEMENTS, used if you have many options to choose from
+
+
+
+//Accessing Object properties with variables
+var dogs = {
+    Fido: "Mutt",
+    Hunter: "Doberman",
+    Snoopie: "Beagle"
+  };
+  var myDog = "Hunter";
+  var myBreed = dogs(myDog) //accessing dogs(Hunter) 
+  console.log(myBreed); //will print "Doberman"
+  
+//Another way to do this:
