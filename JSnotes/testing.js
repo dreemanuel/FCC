@@ -9,3 +9,4 @@ const drinksArr = ['Patron Tequila', 'Anything with Alcohol', 'Hipster Craft Bee
 if (input = 'Jabroni') {
 
 }
+console.log(professionArr);

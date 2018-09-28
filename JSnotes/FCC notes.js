@@ -31,7 +31,8 @@ function timesFive(a) {
 console.log(timesFive(3));
 
 
-/*queue 
+/*
+queue 
 is an abstract data structure where items are kept in (an) order
 new items are added to the back of queue
 old items are taken off front of queue*/
@@ -141,6 +142,8 @@ golfScore(5, 4);
 
 
 
+
+//OBJECTS
 //Accessing Object properties with variables
 var dogs = {
     Fido: "Mutt",
@@ -148,7 +151,32 @@ var dogs = {
     Snoopie: "Beagle"
   };
   var myDog = "Hunter";
-  var myBreed = dogs(myDog) //accessing dogs(Hunter) 
+  var myBreed = dogs[myDog] //accessing dogs[Hunter] using bracket notation
   console.log(myBreed); //will print "Doberman"
-  
+
 //Another way to do this:
+var someObj = {
+  propName: "John"
+};
+
+function propPrefix(str) {
+  var s = "prop";
+  return s + "str";
+}
+
+var someProp = propPrefix("Name"); //propPrefix + name argument creates property name "propName"
+console.log(someObj[someProp]);
+
+//Updating Object Properties -> using dot notation or bracket notation
+var myDog = {
+    'name': 'Kaya',
+    'breed': 'Balinese',
+    'color': 'brown',
+    'friends': ['Mona']
+}
+myDog.name = 'Kaya Anjing'; //or
+myDog['name'] = 'Kaya Anjing';
+
+//Add new Properties -> same as updating object properties
+//Delete Properties
+delete myDog.color;

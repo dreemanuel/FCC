@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Show in console",
+            "type": "shell",
+            "osx": {
+                "command": "/usr/local/bin/node ${file}"
+            },
+            "linux": {
+                "command": "/usr/bin/node ${file}"
+            },
+            "windows": {
+                "command": "C:\\Program Files\\nodejs\\node.exe ${file}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

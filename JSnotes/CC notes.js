@@ -91,12 +91,12 @@ while (whileLoop < 4) {
 //code block, containing increment iteration
 
 
-assign random numbers to index an array;
-*/
+//assign random numbers to index an array;
+
 const cards = ['diamond', 'spade', 'heart', 'club'];
 let currentCard = '';
 while (currentCard !== 'spade') {
   currentCard = cards[Math.floor(Math.random() * 4)];
   console.log(currentCard);
 };
-/*
+//

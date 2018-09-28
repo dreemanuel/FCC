@@ -32,9 +32,9 @@ nav {
 .navbutton a {
     color: dimgray;
 }
-#img-div {
+#imgdiv {
     background-color: transparent;
-    margin: 0px 6em 3em 6em;
+    margin: 0px 120px 50px 120px;
 }
 #image {
     margin: 0px auto;
@@ -68,7 +68,7 @@ nav {
 }
 #tribute-info {
     background: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
     bottom: 120px;
 }
@@ -97,13 +97,7 @@ article p {
 .block-styling p {
     text-indent: 0px;
     text-align: justify;
-    padding: 7px 7px 12px 7px;
-}
-
-.block-styling ul {
-    text-indent: 0px;
-    text-align: left;
-    margin: 0px 2em;
+    padding: 7px 7px;
 }
 h2 {
     font-size: 48px;
@@ -111,11 +105,6 @@ h2 {
 h4 {
     font-style: italic;
     font-size: 12px;
-}
-.box-shadow {
-    -webkit-box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
-    -moz-box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
-    box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
 }
 .timeline-block {
     background-color: transparent;
@@ -136,6 +125,11 @@ h4 {
 .timeline-head {
     grid-area: head;
 }
+.box-shadow {
+    -webkit-box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
+    -moz-box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
+    box-shadow: 9px 8px 27px -5px rgba(92,92,92,1);
+}
 .timeline-before {
     grid-area: before;
     background: transparent;
@@ -150,7 +144,6 @@ h4 {
 #timeline2 {
     background: lightcyan;
     grid-area: column1;
-    height: auto;
 }
 #timeline3 {
     background: lightgoldenrodyellow;
@@ -160,7 +153,7 @@ h4 {
     background: lightcyan;
     grid-area: column3;
 }
-/*
+
 #bio {
     background: lightgreen;
     position: relative;
@@ -204,18 +197,19 @@ h4 {
     grid-area: bottom;
     background: lightsalmon
 }
-*/
+
+
+
 #tribute-link {
     background: lightgoldenrodyellow;
     text-align: center;
     padding-bottom: 10px;
     position: relative;
-    bottom: 10px;
+    bottom: 120px;
 }
 #tribute-link li {
     font-size: 12px;
     display: inline-block;
-    padding: 0 2em;
 }
 footer {
     text-align: center;
@@ -225,7 +219,7 @@ footer {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .timeline-block {
         grid-template-columns: 1fr;
         grid-template-areas: 
