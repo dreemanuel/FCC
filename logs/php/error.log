@@ -123,3 +123,9 @@
 [25-May-2022 02:46:05 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/andre/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 4
 [25-May-2022 04:41:02 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/andre/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 17
 [25-May-2022 04:41:03 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/andre/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 17
+[25-May-2022 17:22:58 UTC] PHP Warning:  Use of undefined constant title_li - assumed 'title_li' (this will throw an Error in a future version of PHP) in /home/andre/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 37
+[25-May-2022 17:22:58 UTC] PHP Stack trace:
+[25-May-2022 17:22:58 UTC] PHP   1. {main}() /home/andre/Local Sites/fictional-university/app/public/index.php:0
+[25-May-2022 17:22:58 UTC] PHP   2. require() /home/andre/Local Sites/fictional-university/app/public/index.php:17
+[25-May-2022 17:22:58 UTC] PHP   3. require_once() /home/andre/Local Sites/fictional-university/app/public/wp-blog-header.php:19
+[25-May-2022 17:22:58 UTC] PHP   4. include() /home/andre/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:106
