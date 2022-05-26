@@ -129,3 +129,6 @@
 [25-May-2022 17:22:58 UTC] PHP   2. require() /home/andre/Local Sites/fictional-university/app/public/index.php:17
 [25-May-2022 17:22:58 UTC] PHP   3. require_once() /home/andre/Local Sites/fictional-university/app/public/wp-blog-header.php:19
 [25-May-2022 17:22:58 UTC] PHP   4. include() /home/andre/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:106
+[26-May-2022 03:43:35 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/andre/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 45
+[26-May-2022 03:44:33 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/andre/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 45
+[26-May-2022 03:44:34 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/andre/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 45
