@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box; /* what does this do? */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ebe7e7;
+}
+
+.header{
+    padding: 32px;
+    text-align: center;
+    background-color: #e0dddd;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gallery {
+    display: flex;
+    /* "flex" gives control over spacing and alignments of elements within a container (div) */
+    flex-direction: row;
+    /* "flex-direction" determines the MAIN AXIS of the flexbox ("row" / "row-reverse" - horizontal or "column" / "column-reverse" - vertical...the other axis is the CROSS AXIS */
+    flex-wrap: wrap;
+    /* "flex-wrap" determines whether your items will wrap or overflow within the container and AXIS constraints. "wrap" will wrap, "nowrap" will overflow out of the container boundaries */
+    justify-content: center;
+    /* aligns elements like text alignments would */
+    align-items: center;
+    /* aligns elements along the CROSS AXIS */
+    padding: 0 4px;
+}
+
+#gallery img {
+    width: 25%;     /* to give pics a uniform size. height set to a fixed size, width a % */
+    height: 300px; 
+    object-fit: cover;  /* will crop elements to fit determined dimensions, as oppoesed to stretching to fit aspect ratio */
+    margin-top: 8px;
+    padding: 0 4px;
+    border-radius: 10px;    /* rounding out corners */
+}
+
+@media (max-width: 800px) { 
+    #gallery img {
+        width: 50%;
+    }
+}   /* media query translating to: below a screen size at max 800px, all #gallery img elements will be applied with a 50% width of its parent container (resulting in two columns only). If screen size is over 800px, said elements will have more columns, dependent on each elemnt size.  */
+
+@media (max-width: 600px) {
+    #gallery img {
+        width: 100%;
+    }
+}   /* if screen size is 600px or less, all #gallery img elements will be applied with a 100% width of its parent container (resulting in one column only).  */
