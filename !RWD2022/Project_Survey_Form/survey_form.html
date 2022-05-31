@@ -11,7 +11,7 @@
 
         <!-- TITLE AND DESCRIPTION-->
         <h1 id="title">Join Code Works</h1>
-        <h2 id="description">Register by filling in below</h2>
+        <p id="description">Register by filling in below</p>
 
         <!-- FORM START -->
         <form id="survey-form" action="#">
@@ -30,9 +30,9 @@
             <fieldset name="gender-input">
                 <label name="gender">
                     Gender: 
-                    <label><input class="inline-input" type="radio" name="gender"> Male</label>
-                    <label><input class="inline-input" type="radio" name="gender"> Female</label>
-                    <label><input class="inline-input" type="radio" name="gender"> Other (I prefer not to say)</label>
+                    <label><input class="inline-input" type="radio" name="gender" value="male"> Male</label>
+                    <label><input class="inline-input" type="radio" name="gender" value="female"> Female</label>
+                    <label><input class="inline-input" type="radio" name="gender" value="other"> Other (I prefer not to say)</label>
                 </label>
             </fieldset>
 
@@ -73,9 +73,7 @@
             </fieldset>
 
             <!-- submit button to submit all inputs -->
-            <fieldset>
-                <label>SUBMIT</label>
-            </fieldset>
+            <input id="submit" type="submit" value="Submit Registration">
         </form>
     </body>
     <footer>
