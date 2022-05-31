@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    color: black;
+    background-color: grey;
+}
+
+.top-image {
+    max-width: 500px;
+    margin: 0 auto 0 auto;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h1, 
+h2,
+p {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto 0.5em au;
+}
+
+form {
+    padding: 0px;
+    max-width: 500px;
+    margin: 0.1em auto 0.1em auto;
+    padding: 0;
+}
+
+label {
+    text-align: left;
+}
+
+input {
+    text-align: right;
+    height: 1.5rem;
+    background-color: bisque;
+    border-color: azure;
+}
+
+input, 
+label {
+    width: 100%;
+    min-width: 20px;
+    max-width: 400px;
+    margin: 0.1em auto 0.1em auto;
+    padding: 0;
+    display: block;
+}
+
+.inline-input {
+    display: inline;
+    width: unset;
+    vertical-align: middle;
+}
+
+.inline-input[type="checkbox"] {
+    margin-left: 0;
+}
+
+input[type="radio"] {
+    background-color: bisque;
+}
+
+input[type="checkbox"] {
+    background-color: bisque;
+}
+
+fieldset {
+    padding: 0;
+    display: block;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+select {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+textarea {
+    width: 100%;
+}

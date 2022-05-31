@@ -1,26 +1,81 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Survey Form</title>
+        <title>Join Us</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h1 id="title">Survey Title</h1>
-        <p id="description">Survey description</p>
+        <!-- TOP IMAGE-->
+        <img id="top-image" class="top-image" href="//code-img.jpg" alt="Survey Logo Image">
+
+        <!-- TITLE AND DESCRIPTION-->
+        <h1 id="title">Join Code Works</h1>
+        <h2 id="description">Register by filling in below</h2>
+
+        <!-- FORM START -->
         <form id="survey-form" action="#">
-            <label id="name-label">Enter your name: <input id="name" type="text" name="name" required>placeholder</label>
-            <label id="email-label">Enter your email: <input id="email" type="email" name="email" required>placeholder</label>
-            <label id="number-label">Enter a number: <input id="number" type="number" name="number">placeholder</label>
-            <label>How did you hear about us? 
-                <select id="dropdown">
-                    <option value="">(select one)</option>
-                    <option value="1">freeCodeCamp News</option>
-                    <option value="2">freeCodeCamp YouTube Channel</option>
-                    <option value="3">freeCodeCamp Forum</option>
-                    <option value="4">Other</option>
-                </select>
-            </label>
+            <!-- name text input -->
+            <fieldset name="fieldset-top">
+                <label id="name-label">Name:
+                    <input id="name" type="text" name="name" placeholder="Enter your name here" required>
+                </label>
+                <!-- email input -->
+                <label id="email-label">Email:
+                    <input id="email" type="email" name="email" placeholder="Enter your email here" required>
+                </label>
+            </fieldset>
+
+            <!-- radio buttons min 2 options, grouped with name attribute -->
+            <fieldset name="gender-input">
+                <label name="gender">
+                    Gender: 
+                    <label><input class="inline-input" type="radio" name="gender"> Male</label>
+                    <label><input class="inline-input" type="radio" name="gender"> Female</label>
+                    <label><input class="inline-input" type="radio" name="gender"> Other (I prefer not to say)</label>
+                </label>
+            </fieldset>
+
+            <!-- insert random number with min/max -->
+            <fieldset name="number-input">
+                <label id="number-label">Random Number:
+                    <input id="number" type="number" name="number" min="0" max="999" placeholder="Enter a number between 0 and 999">
+                </label>
+            </fieldset>
+
+            <!-- select dropdown menu, min 2 choices -->
+            <fieldset name="fieldset-bottom">
+                <label>Which tutorial package you would like to buy?
+                    <select id="dropdown">
+                        <option value="">(select one)</option>
+                        <option value="1">freeCodeCamp News</option>
+                        <option value="2">freeCodeCamp YouTube Channel</option>
+                        <option value="3">freeCodeCamp Forum</option>
+                        <option value="4">Other</option>
+                    </select>
+                </label>
+            </fieldset>
+            <!-- checkboxes several fields, each with a value attribute -->
+            <fieldset name="checkboxes">
+                <label>
+                What would you like to achieve by learning to code? (Check all applicable)
+                <label><input class="inline-input" type="checkbox" name="check1" value="1"> I want to learn something new</label>
+                <label><input class="inline-input" type="checkbox" name="check2" value="2"> I want to build a project</label>
+                <label><input class="inline-input" type="checkbox" name="check3" value="3"> I want to change my career path</label>
+                <label><input class="inline-input" type="checkbox" name="check4" value="4"> Learning how to code will level up my current career/job.
+                </label> 
+                </label>
+            </fieldset>
+
+            <!-- textarea for additional comments -->
+            <fieldset name="comment-box">
+                <label>Address: <textarea name="comment-box" rows="5" cols="50" placeholder="Please enter your address..."></textarea></label>
+            </fieldset>
+
+            <!-- submit button to submit all inputs -->
+            <fieldset>
+                <label>SUBMIT</label>
+            </fieldset>
         </form>
     </body>
     <footer>

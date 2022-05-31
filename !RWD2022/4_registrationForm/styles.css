@@ -13,7 +13,8 @@ label {
     margin: 0.5rem 0;
 }
 
-h1, p {
+h1, 
+p {
     margin: 1em auto;
     text-align: center;
 }
@@ -35,16 +36,23 @@ fieldset:not(:last-of-type) {           /* pseudocode that selects all elements 
     border-bottom: 3px solid #3b3b4f;
   }
 
-input, textarea, select {
+input, 
+textarea, 
+select {
     width: 100%;
     margin: 10px 0 0 0;
     min-height: 2em;
 }
 
-input, textarea {
+input, 
+textarea {
     background-color: #0a0a23;
     border: 1px solid #0a0a23;
     color: #ffffff;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
 }
 
 input[type="submit"] {
@@ -56,10 +64,6 @@ input[type="submit"] {
     border-color: white;
     background-color: #3b3b4f;
     min-width: 300px;
-}
-
-input[type="file"] {
-    padding: 1px 2px;
 }
 
 .inline {
