@@ -1,0 +1,93 @@
+* {                             /* global selector */
+    box-sizing: border-box;     /* element dimensions are defined by selectors, not automated by browser */
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.label {
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+}
+
+header h1 {                     /* without the comma, it targets h1 elements INSIDE the header tag  */
+    text-align: center;
+    margin: -4px 0;
+    letter-spacing: 0.15px;     /* space out letters */
+}
+
+.bold {
+    font-weight: 800;           /* will make selected font bolder */
+}
+
+.divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+    clear: right;               /* will nullify floated property's wraparound, "clear"ing the floated property on the "right" side, pushing the .divider and any following content below */
+}
+
+p {
+    margin: 0;
+}
+
+.right {
+    float: right;   /*  float will push an element (and its container) a certain direction, 
+                    *   and other elements will WRAP AROUND IT */
+}
+
+.lg {
+    height: 10px;
+}
+
+.lg, .md {
+    background-color: black;
+    border: 0;
+}
+
+.sm-text {
+    font-size: 0.85rem;   
+}
+
+.calories-info h1 {
+    margin: -5px -2px;
+    overflow: hidden;
+}
+
+.calories-info span {
+    font-size: 1.2em;
+    margin-top: -7px;
+}
+
+.md {
+    height: 5px;
+}
+
+.daily-value p:not(.no-divider) {       /* selects all p elements inside .daily-value class that is not also in .no-divider class... :not(.class_name) or :not(#id_name) pseudocode */
+    border-bottom: 1px solid #888989;
+}
+
+.no-divider {
+
+}
+
+.indent {
+    margin-left: 1em;
+}
+
+.dbl-indent {
+    margin-left: 2em;
+}
+
+.note {
+    font-size: 0.6em;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px; /* aligns the wrapped text starting from the second line with the start of the first letter of the first line */
+}
