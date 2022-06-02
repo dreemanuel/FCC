@@ -1,0 +1,63 @@
+body {
+    background: #f5f6f7;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+#logo {
+    width: max(100px, 18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 35 / 4;
+    padding: 0.4rem;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+}
+
+h1 {
+    color: #f1be32;
+    font-size: min(5vw, 1.2em);
+}
+
+h1,
+h2 {
+    font-family: Verdana, sans-serif;
+}
+
+h2 {
+    border-bottom: 4px solid #dfdfe2;
+}
+
+nav {
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+}
+
+/* use this selector to target all (ul) elements within the (nav) */
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* specific code to make text visible only for screen readers to see */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+p::before { /* makes the p element automatically turn into "Question (number sequence)" on the html site */
+    content: "Question #";
+}
