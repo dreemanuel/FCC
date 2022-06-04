@@ -1,3 +1,10 @@
+/* set following global properties only if browser settings is set to no preference */
+@media (prefers-reduced-motion: no-preference){
+    * {                             /* set global properties */
+        scroll-behavior: smooth;    /* adjusts scrolling movement when jumping sections via clicking links */
+    }
+}
+
 body {
     background: #f5f6f7;
     color: #1b1b32;
@@ -16,12 +23,18 @@ header {
     width: 100%;
     height: 50px;
     background-color: #1b1b32;
-    display: flex;
+    /* important CSS for flex below: */
+    display: flex;  /* activate flex properties */
+    justify-content: space-between; /* evenly space between children */
+    align-items: center; /* align items vertically towards the center axis ?? */
+    position: fixed;        /* fix the header on the top of viewport */
+    top: 0;
 }
 
 h1 {
     color: #f1be32;
     font-size: min(5vw, 1.2em);
+    text-align: center;
 }
 
 h1,
@@ -31,6 +44,8 @@ h2 {
 
 h2 {
     border-bottom: 4px solid #dfdfe2;
+    padding-top: 60px;
+    margin: 0;
 }
 
 nav {
@@ -43,6 +58,65 @@ nav {
 nav > ul {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap; /* wraps children elements if situation calls for */
+    /* below code to align nav button items: */
+    align-items: center;
+    /* need to look these up: */
+    padding-inline-start: 0; 
+    margin-block: 0;
+    height: 100%;
+}
+
+nav > ul > li {
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
+
+nav > ul > li:hover {   /* selects elements if cursor hovers over it */
+    color: #1b1b32;
+    background-color: #dfdfe2; /* background color and font color switches when mouse hovers over */
+    cursor: pointer; /* cursor becomes a pointer when hover over */
+}
+
+li > a {
+    color: inherit; /* what does this mean?? */
+    text-decoration: none; /* makes links (<a>) don't have underlines */   
+}
+
+main {
+    padding-top: 50px;
+}
+
+section {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto 10px auto;
+}
+
+.info {
+    padding: 10px 0 0 5px;
+}
+
+.info input,
+.info label {
+    display: inline-block;
+    text-align: right;
+}
+
+.info input {
+    width: 50%;
+    text-align: left;
+}
+
+.info label {
+    width: 10%;
+    min-width: 55px;
+}
+
+input {
+    font-size: 14px;
 }
 
 /* specific code to make text visible only for screen readers to see */
@@ -58,6 +132,61 @@ nav > ul {
     border: 0;
 }
 
+p {
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
 p::before { /* makes the p element automatically turn into "Question (number sequence)" on the html site */
     content: "Question #";
+}
+
+.question-block {
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+
+.formrow {
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+.question {
+    padding: 0;
+    border: none;
+}
+
+.answers-list {
+    padding: 0;
+    list-style: none; /* removes the default styling */
+}
+
+button {
+    display: block;
+    margin: 40px auto;
+    width: 40%;
+    padding: 15px;
+    font-size: 23px;
+    background-color: #d0d0d5;
+    border: 3px solid #3b3b4f;
+}
+
+footer {
+    display: flex; /* activate flexbox properties */
+    justify-content: center; /* flexbox align text */
+    background-color: #2a2a40;
+}
+
+footer,
+footer a {
+    color: whitesmoke;
+}
+
+address {
+    padding: 15px;
+    text-align: center;
 }
