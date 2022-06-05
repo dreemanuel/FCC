@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #0a0a23;
+}
+
+/* will select span element whose class INCLUDES "sr-only" */
+/* the  !important property value addon ensures that property will always be applied and not overwritten */
+span[class~="sr-only"] {        
+    border: 0 !important;
+    /* clup is used to define visible portions of an element */
+    clip: rect(1px, 1px, 1px, 1px) !important;     
+    /* clip-path determines the shape the clip property should take */
+    clip-path: inset(50%) !important;              
+    -webkit-clip-path: inset(50%) !important;
+    /* the follwing code makes elements extremely small */
+    width: 1px !important;
+    height: 1px !important;
+    /* the following code ensures that elements will not only be invisible, but also not even within page view */
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    position: absolute !important;
+    margin: -1px !important;
+    padding: 0 !important;
+}
+
+h1 {
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+
+/* Target the Title - we want to arrange so that "Balance Sheet" appears before "AcmeWidgetCorp" */
+h1 .flex {
+    /* enable flex */
+    display: flex;
+    /* displays reverse order: column view from bottom to top nested elements within */
+    /* so that "Balance Sheet" appears before "AcmeWidgetCorp" */
+    flex-direction: column-reverse;
+    /* create some space between elements */
+    gap: 1rem;
+}
+
+/* target the "AcmeWidgetCorp" text to make it appear as a subheading */
+h1 .flex span:first-of-type {
+    font-size: 0.7em;
+}
+
+/* conversely, target the "Balance Sheet" element and make it bigger */
+h1 .flex span:last-of-type {
+    font-size: 1.2em;
+}
+
+/* make a border for table, center it, and make it responsive */
+section {
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+
+/* target the #years div element */ 
+#years {
+    /* move to the far right end of table with flexbox */
+    display: flex;
+    justify-content: flex-end; 
+    position: sticky;
+    top: 0;
+    /* add color */
+    color: #fff;
+    background-color: #0a0a23;
+    /* ensure that element will not be hidden */
+    z-index: 999;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+}
+
+/* this syntax selects elements that has any kind of class property set */
+#years span[class] {
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/* target all elements that are don't match the selector in brackets, 
+in this case, any of your span elements that do not have the span[class~="sr-only"] class. 
+This ensures that your earlier rules for the sr-only class are not overwritten. */
+span:not(.sr-only) {
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    position: relative;
+    margin-top: 3rem;
+}
+
+table caption {
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+}
