@@ -107,4 +107,85 @@ table caption {
     color: #356eaf;
     font-size: 1.3em;
     font-weight: normal;
+    /* fix the captions to the left margin */
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+}
+
+tbody td {
+    width: 100vw; /* vw = viewport width? */
+    min-width: 4rem;
+    max-width: 4rem;
+}
+
+tbody th {
+    width: calc(100% - 12rem); /* 100% of the container width minus 12rem */
+}
+
+/* 
+# The [attribute="value"] selector targets any element that has an attribute with a specific value. 
+# Create a tr[class="total"] selector to target specifically your tr elements with the total class. 
+# Give it a bottom border of 4px double #0a0a23 and make the font bold.
+
+# The key difference between tr[class="total"] and tr.total is that the first 
+# will select tr elements where the ONLY class is total. 
+# The second will select tr elements where the class INCLUDES total.
+*/
+tr[class="total"] {
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+}
+
+tr[class="total"] th {
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td {
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+/* 
+# The :nth-of-type() pseudo-selector is used to target specific elements 
+# based on their order among siblings of the same type.
+*/
+tr.total td:nth-of-type(3) {
+    padding-right: 0.5rem;
+}
+
+tr.total:hover {
+    background-color: #99c9ff;
+}
+
+td[class="current"] {
+    font-style: italic;
+}
+
+tr[class="data"] {
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem );
+}
+
+tr.data th {
+    text-align: left;
+    padding: 0.3rem 0 0 0.5rem;
+}
+
+tr.data th .description {
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    padding: 1rem 0 0.75rem 0;
+    margin-right: -13.5rem;
+}
+
+tr.data td {
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type {
+    padding-right: 0.5rem;
 }
