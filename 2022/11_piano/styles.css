@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+}
+
+/* 
+# Now that you have reset the html box model, you need to pass that on to the elements within as well. 
+# To do this, you can set the box-sizing property to inherit, which will tell the targeted elements 
+# to use the same value as the parent element.
+
+# You will also need to target the pseudo-elements, which are special keywords that follow a selector. 
+# The two pseudo-elements you will be using are the "::before" and "::after" pseudo-elements.
+
+# The "::before" selector creates a pseudo-element which is the first child 
+# of the selected element, while the "::after" selector creates a pseudo-element 
+# which is the last child of the selected element. 
+# These pseudo-elements are often used to create cosmetic content, 
+# which you will see later in this project.
+*/
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+#piano {
+    width: 992px;
+    height: 290px;
+    background-color: #00471b;
+    border-radius: 10px;
+    margin: 80px auto;
+    padding: 90px 20px 0 20px; 
+    /* 
+    # The img element needs its parent to have a position set as a point of reference. 
+    # Set the position of the "#piano" selector to "relative".
+    */
+    position: relative;
+
+}
+
+.keys {
+    background-color: #040404;
+    width: 949px;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden; /* This property will hide any element that is pushed outside the set width value of .keys */
+}
+
+.key {
+    background-color: #ffffff;
+    border-radius: 0 0 3px 3px;
+    /* what does the "relative" position value do??? */
+    position: relative;
+    width: 41px;
+    height: 175px;
+    margin: 2px;
+    /* what does the "float" property do? */
+    float: left;
+}
+
+/* 
+# This will target the elements with the class key black--key, 
+# and select the pseudo-element after these elements in the HTML.
+ */
+.key.black--key::after {
+    background-color: #1d1e22;
+    content: "";
+    /* 
+    # The content property is used to set or override the content of the element. 
+    # By default, the pseudo-elements created by the "::before" and "::after" pseudo-selectors are empty, 
+    # and the elements will not be rendered to the page. 
+    # Setting the content property to an empty string "" will ensure the element 
+    # is rendered to the page while still being empty.
+    
+    # If you would like to experiment, try removing the background-color property 
+    # and setting different values for the content property, such as "♥". 
+    # Remember to undo these changes when you are done so the tests pass.
+    */
+    position: absolute;
+    left: -18px;
+    width: 32px;
+    height: 100px;
+    border-radius: 0 0 3px 3px;
+}
+
+.logo {
+    width: 200px;
+    position: absolute;
+    top: 23px;
+}
+
+/* MAKE RESPONSIVE via @media queries */
+@media (max-width: 768px) {
+    #piano {
+        width: 358px;
+    }
+    .keys {
+        width: 318px;
+    }
+    .logo{
+        width:150px;
+    }
+}
+
+@media (min-width: 769px) 
+and (max-width: 1199px) {
+    #piano {
+        width: 675px;
+    }
+    .keys {
+        width: 633px;
+    }
+}
